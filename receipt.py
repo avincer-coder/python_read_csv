@@ -19,8 +19,15 @@ def main():
                 next(file)
 
                 for request_line in file:
-                        print(request_line)
-        
-        print(dict_product_from_read["D215"])
+                        file_request_format = request_line.strip().split(",")
+                        product_code = file_request_format[0]
+                        product_quantity = int(file_request_format[1])
+                        product_price = dict_product_from_read[product_code][1]
+                        product_name = dict_product_from_read[product_code][0]
+                        
+                        print(f"{product_name} {product_quantity} ${product_price}")
+
+                        if product_code in file_request_format:
+                                print(f"se repite el producto {product_name}")
 
 main()
