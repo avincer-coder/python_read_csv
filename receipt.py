@@ -29,5 +29,6 @@ def main():
 
                         if product_code in file_request_format:
                                 print(f"se repite el producto {product_name}")
-
+                        
+                        print()
 main()
