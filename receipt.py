@@ -1,3 +1,4 @@
+# Function new_year_sale excedes the requierments
 import pandas as pd
 from datetime import datetime
 
